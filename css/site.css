@@ -2,113 +2,66 @@
   font-family: "Alix FB";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/alix-fb-regular.woff") format("woff");
+  src: url("/fonts/alixfb-regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Alix FB";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/alix-fb-bold.woff") format("woff");
+  src: url("/fonts/alixfb-bold.woff") format("woff");
 }
 
 @font-face {
   font-family: "Alix FB";
   font-style: italic;
   font-weight: 400;
-  src: url("/fonts/alix-fb-italic.woff") format("woff");
+  src: url("/fonts/alixfb-italic.woff") format("woff");
 }
 
 @font-face {
   font-family: "Alix FB";
   font-style: italic;
   font-weight: 700;
-  src: url("/fonts/alix-fb-bold-italic.woff") format("woff");
+  src: url("/fonts/alixfb-bolditalic.woff") format("woff");
 }
 
 @font-face {
   font-family: "Harriet Text";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/harriet-text-regular.woff") format("woff");
+  src: url("/fonts/harriettext-regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Harriet Text";
   font-style: italic;
   font-weight: 400;
-  src: url("/fonts/harriet-text-regular-italic.woff") format("woff");
+  src: url("/fonts/harriettext-regularitalic.woff") format("woff");
 }
 
 @font-face {
   font-family: "Harriet Text";
   font-style: normal;
   font-weight: 500;
-  src: url("/fonts/harriet-text-medium.woff") format("woff");
+  src: url("/fonts/harriettext-medium.woff") format("woff");
 }
 
 @font-face {
   font-family: "Harriet Text";
   font-style: italic;
   font-weight: 500;
-  src: url("/fonts/harriet-text-medium-italic.woff") format("woff");
-}
-
-/*
-@font-face {
-  font-family: "Harriet Text";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/harriet-text-bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Harriet Text";
-  font-style: italic;
-  font-weight: 700;
-  src: url("/fonts/harriet-text-bold-italic.woff") format("woff");
-}
-*/
-
-@font-face {
-  font-family: "Whitney";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/whitney-book.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Whitney";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/whitney-bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Whitney SC";
-  font-style: normal;
-  font-weight: 500;
-  src: url("/fonts/whitney-medium-sc.woff") format("woff");
-}
-
-/* Special stuff */
-.posts a {
-  color: inherit;
-  display: block;
+  src: url("/fonts/harriettext-mediumitalic.woff") format("woff");
 }
 
 .desc {
-  display: block;
+  color: #000;
 }
 
-.posts a:hover strong {
-  color: inherit;
-}
-
-article .meta {
+.meta {
   color: #666;
-  font-size: 20px;
-  margin-top: 70px;
+  display: block;
+  font-size: 18px;
 }
 
   .meta a {
@@ -119,12 +72,6 @@ article .meta {
   text-align: right;
 }
 
-  .all a::after {
-    color: #093;
-    content: "\20\2192";
-  }
-
-/* General stuff */
 * {
   margin: 0;
   padding: 0;
@@ -133,62 +80,45 @@ article .meta {
 html {
   background: #fff;
   color: #000;
-  font: 400 25px/35px "Harriet Text", serif;
+  font: 400 24px/32px "Harriet Text", serif;
+  -webkit-font-smoothing: antialiased;
   height: 100%;
 }
 
 body {
   box-sizing: border-box;
   margin: 0 auto;
-  max-width: 35em;
+  max-width: 896px;
   min-height: 100%;
-  padding-bottom: 90px;
+  padding-bottom: 104px;
   position: relative;
 }
 
-h1, h2, h3, header, footer, .all {
-  font-family: "Whitney", sans-serif;
-}
-
 h1 {
-  font-size: 50px;
-  font-weight: 700;
-  line-height: 50px;
-  margin-bottom: 50px;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 48px;
+  margin-bottom: 48px;
 }
 
 h2 {
-  font-family: "Whitney SC", sans-serif;
-  font-size: 35px;
+  font-size: 28px;
   font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: lowercase;
 }
 
-h3 {
-  font-size: 25px;
-  font-weight: 600;
-  margin-top: 50px;
+dl, ol, p, pre, ul {
+  margin: 24px 0;
 }
 
-dl, ol, p, ul {
-/*
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-*/
-  margin: 25px 0;
-}
-
+dd,
 li {
   list-style: none;
-  margin: 0 0 15px 35px;
+  margin: 0 0 18px 36px;
   position: relative;
 }
 
 li::before {
-  left: -35px;
+  left: -36px;
   position: absolute;
   top: 0;
 }
@@ -201,13 +131,17 @@ ol {
   counter-reset: item;
 }
 
-ol li:before {
+ol li::before {
   content: counter(item) ".";
   counter-increment: item;
 }
 
-a, .posts strong {
-  color: #093;
+dd p:first-child {
+  margin-top: 0;
+}
+
+a {
+  color: #990400;
   text-decoration: none;
 }
 
@@ -215,14 +149,21 @@ a:hover {
   color: #000;
 }
 
+dt,
 strong {
   font-weight: 500;
 }
 
-/* Sectioning stuff */
+code {
+  font-family: "Alix FB", monospace;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
 header {
-  font-size: 20px;
-  padding: 35px;
+  font-size: 18px;
 }
 
   header p {
@@ -233,16 +174,11 @@ header {
       color: #666;
     }
 
-section {
-  padding: 35px;
-}
-
 footer {
   bottom: 0;
   color: #999;
-  font-size: 20px;
+  font-size: 18px;
   left: 0;
-  padding: 35px;
   position: absolute;
   right: 0;
 }
@@ -255,22 +191,18 @@ footer {
       color: inherit;
     }
 
-/* Code stuff */
-code {
-  font-family: "Alix FB", monospace;
+footer,
+header,
+section {
+  padding: 36px;
 }
 
-pre {
-  margin-right: -35px;
-  white-space: pre-wrap;
-}
-
-/* Article stuff */
 article {
 }
 
-  article h2 {
-    margin-top: 50px;
+  article h2,
+  article .meta {
+    margin-top: 56px;
   }
 
 /* Generated by Pandoc */
